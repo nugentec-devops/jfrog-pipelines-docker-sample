@@ -11,8 +11,8 @@ resources:
     type: Image
     configuration:
       registry: devdocker                                # <-- replace with your artifactory integration
-      sourceRepository: docker-dev               # <-- required if registry is Artifactory
-      imageName: nugentec.jfrog.io/artifactory/docker-dev/dbp # < -- replace with your image path and name
+      sourceRepository: default-docker-local               # <-- required if registry is Artifactory
+      imageName: nugentec.jfrog.io/default-docker-local/dbp # < -- replace with your image path and name
       imageTag: latest
       autoPull: true
       
@@ -40,7 +40,7 @@ pipelines:
           affinityGroup: dbp_group
           dockerFileLocation: .
           dockerFileName: Dockerfile
-          dockerImageName: nugentec.jfrog.io/artifactory/docker-dev/dbp  # replace with your image path and name
+          dockerImageName: nugentec.jfrog.io/default-docker-local/dbp  # replace with your image path and name
           dockerImageTag: ${run_number}
           inputResources:
             - name: dbp_repo
