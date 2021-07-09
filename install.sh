@@ -42,7 +42,7 @@ apt-get update -qq
 apt-get install -y -q git="$GIT_VERSION"
 
 
-curl -fL https://getcli.jfrog.io | sh -s v2
+curl -fL https://getcli.jfrog.io | sh
 sudo chmod +x jfrog
 mv jfrog /usr/bin/jfrog
 
